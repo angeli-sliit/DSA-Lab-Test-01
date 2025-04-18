@@ -1,0 +1,63 @@
+ Question 6:
+
+i) Delete a specific node (P0)
+
+Let’s say `P0` is pointing to the node with value `11`:
+
+
+Before:
+45 <-> 65 <-> [11] <-> 87
+
+
+Steps to delete P0 (node with 11):
+
+
+P0.previous.next = P0.next;
+P0.next.previous = P0.previous;
+
+
+After:
+45 <-> 65 <-> 87
+
+
+
+
+
+
+ ii) Delete the first node
+
+Before:
+first → 45 <-> 65 <-> 11 <-> 87
+
+
+Steps:
+first = first.next;
+first.previous = null;
+
+
+After:
+first → 65 <-> 11 <-> 87
+
+
+
+
+
+
+iii) Insert a new link as the first link
+
+Suppose new node has value 99
+
+Before:
+first → 45 <-> 65 <-> 11 <-> 87
+
+
+Steps:
+Link newLink = new Link(99);
+newLink.next = first;
+first.previous = newLink;
+first = newLink;
+
+
+After:
+first → 99 <-> 45 <-> 65 <-> 11 <-> 87
+

@@ -1,0 +1,56 @@
+PART A - Question 2
+
+
+first → [8] → [10] → [32] → [88] → null
+
+
+
+I)
+	Link temp = first;
+	while (temp != NULL)
+	{
+  	  System.out.print(temp.ID + " ");
+  	  temp = temp.next;
+	}
+
+
+	Explanation: This prints all node IDs from the beginning until the end of the list.
+
+	Output: 8 10 32 88
+
+
+
+
+
+
+
+II)
+	Link temp = first;
+	while (temp.next != NULL)
+	{
+ 	   System.out.print(temp.ID + " ");
+	    temp = temp.next;
+	}
+
+	Explanation: This prints all node IDs except the last one (88), because the loop stops when temp.next == null.
+
+	Output: 8 10 32
+
+
+
+
+
+III)
+
+	first = first.next;
+	System.out.print(first.next.ID);
+
+	Explanation:
+
+	first = first.next; → moves first from node 8 to node 10
+
+	first.next → now points to 32
+
+	first.next.ID → prints 32
+
+	Output: 32
